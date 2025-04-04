@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Kumbh+Sans:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #A3966A;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+header h1{
+    font-family: "Anton SC";
+    font-size: 40px;
+    position: absolute;
+    top: 3vh;
+    left: 45vw;
+}
+/* ABOUT */
+.about{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+}
+.about-left{
+    width: 50%;
+    justify-content: center;    
+    position: absolute;
+    top: 18%;
+    left: 10%;
+}
+.about-left h2{
+    width: 70%;
+    font-family: "Anton SC";
+    font-size: 50px;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+    top: 30vh;
+    left: 10vw;
+}
+.about-left p{
+    width: 70%;
+    height: 8vh;
+    font-family: Lucida Sans Typewriter;
+    position: absolute;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+    top: 22em;
+}
+.about-right{
+    width: 50%;
+    justify-content: center;    
+    position: absolute;
+    top: 18%;
+    left: 50%;
+}
+.about-right img{
+    width: 80%;
+    height: 60vh;
+    top: 30%;
+}
+.movie{
+    width: 100%;
+    height: 100VH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.video{
+    width: 100%;
+    height: 300vh;
+    max-height: 80vh;
+    margin: 5em 10em;
+    display: block;
+    object-fit: cover;
+}
+/* PRODUCTS */
+.products{
+    width: 100%;
+    height: 230vh;
+    background-color: #FBF0DF;
+    position: relative;
+}
+.products h2{
+    width: 70%;
+    font-family: "Anton SC";
+    font-size: 50px;
+    position: absolute;    
+    top: 10vh;
+    left: 10vw;
+}
+.products-1{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 25vh;
+    left: 20vh;
+}
+.products-1 .beans{
+    width: 20vw;
+    height: 65vh;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 1em;
+    position: relative;
+}
+.products-1 .beans img{
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+}
+.products-1 .beans h4{
+    position: absolute;
+    top: 90%;
+    left: 3em;
+    margin: 0.5em 0;
+    position: static;
+    text-align: center;
+}
+.products-1 .beans p{
+    position: absolute;
+    top: 95%;
+    left: 3em;
+    margin: 0.5em 0;
+    position: static;
+    text-align: center;
+}
+.products-2{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 35vh;
+    left: 20vh;
+}
+.products-2 .beans{
+    width: 20vw;
+    height: 65vh;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 1em;
+    position: relative;
+}
+.products-2 .beans img{
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+}
+.products-2 .beans h4{
+    position: absolute;
+    top: 90%;
+    left: 3em;
+    margin: 0.5em 0;
+    position: static;
+    text-align: center;
+}
+.products-2 .beans p{
+    position: absolute;
+    top: 95%;
+    left: 3em;
+    margin: 0.5em 0;
+    position: static;
+    text-align: center;
+}
+.products button{
+    width: 8vw;
+    height: 6vh;
+    border-radius: 50px;
+    font-family: "Anton SC", serif;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5em;
+    right: 15em;
+}
+.products button:hover{
+    background-color: #90553C;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #A3966A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-family: Lucida Sans Typewriter;
+    font-size: 30px;
+    margin: 0;
+}
+
+
+/* @media screen and (max-width: 394px) { */
+@media screen and (max-width: 769px) {
+/* @media screen and (max-width: 426px) { */
+/* HEADER */
+header{
+    display: flex;
+    position: relative;
+}
+header h1{
+    left: 30vw;
+}
+/* ABOUT */
+.about{
+    width: 100%;
+    height: 130vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.about-left{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 3em;
+    align-items: center;
+}
+.about-left h2{
+    font-size: 25px;
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+}
+.about-left p{
+    top: 15em;
+    left: 2em;
+}
+.about-right{
+    width: 100%;
+    height: 40%;
+    justify-content: center;    
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    align-items: center;
+}
+/* PRODUCTS */
+.products{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10em;
+}
+.products h2{
+    font-size: 30px;
+    top: 1.5em;
+    left: 2em;
+}
+.products-1,
+.products-2{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 5em;
+    left: 2em;
+    padding-top: 0;
+}
+.products-1 .beans,
+.products-2 .beans{
+    width: 50vw;
+    height: auto;
+    margin: 2em 3.5em;
+}
+.products-1 .beans img,
+.products-2 .beans img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.products button{
+    width: 8em;
+    position: relative;
+    bottom: -8em;
+    left: 34%;
+}
+.products button:hover{
+    background-color: #90553C;
+}
+/* FOOTER */
+.footer{
+    position: relative;
+    bottom: 0;
+ }
+.footer p{
+    font-size: 20px;
+}
+}
+

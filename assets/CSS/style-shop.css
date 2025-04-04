@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Kumbh+Sans:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #A3966A;
+    display: flex;
+    flex-direction: row;
+}
+header h1{
+    font-family: "Anton SC";
+    font-size: 40px;
+    position: absolute;
+    top: 3vh;
+    left: 45vw;
+}
+/* SHOP */
+.shop{
+    width: 100%;
+    height: 150vh;
+    position: relative;
+}
+.shop img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 3;
+}
+.shop .top{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    opacity: 70%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.shop .top .top-left{
+    width: 30%;
+    line-height: 2.5em;
+    justify-content: space-around;
+    position: absolute;
+    top: 5em;
+    left: 12em;
+}
+.shop .top .top-right{
+    width: 30%;
+    line-height: 2.5em;
+    justify-content: space-around;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+    position: absolute;
+    top: 5em;
+    right: 10em;
+}
+.shop .low{
+    width: 80%;
+    height: 40%;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    opacity: 70%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.shop .low h2{
+    width: 30%;
+    position: absolute;
+    left: 8em;
+}
+.shop .low form{
+    width: 30em;
+    position: absolute;
+    top: 4.5em;
+    left: 12em;
+    line-height: 3em;
+}
+.shop .low from div{ /*labelの幅を固定*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.shop .low form label{ /*labelの幅を固定*/
+    width: 10em;
+}
+.shop .low form input{
+    width: 30em;
+    margin-top: 1em;  /*inputを下に下げる*/
+    margin-left: 1em;
+    line-height: 2em;
+    position: absolute;
+    left: 8em;
+}
+.shop .low form textarea{
+    width: 30em;
+    height: 10em;
+    margin-top: 1em; /*textareaを下に下げる*/
+    position: absolute;
+    left: 5em;
+    margin-left: 4em;
+}
+.shop button{
+    width: 8em;
+    height: 3em;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 8em;
+    right: 20%;
+}
+.shop button:hover{
+    background: #C9D9C3;
+}
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #A3966A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-family: Lucida Sans Typewriter;
+    font-size: 30px;
+    margin: 0;
+}
+
+/* @media screen and (max-width: 394px) { */
+ @media screen and (max-width: 769px) {
+/* @media screen and (max-width: 426px) { */
+/* HEADER */
+header{
+    display: flex;
+    position: relative;
+}
+header h1{
+    left: 30vw;
+}
+/* SHOP */
+.shop{
+    width: 100%;
+    height: 250vh;
+    position: relative;
+}
+.shop img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 3;
+}
+.shop .top{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    top: 5%;
+    left: 0;
+}
+.shop .top .top-left{
+    width: 90%;
+    line-height: 2.5em;
+    top: .5em;
+    left: 5%;
+}
+.shop .top .top-right{
+    width: 90%;
+    top:45%;
+    left: 5%;
+}
+.shop .top .top-left h2,
+.shop .top .top-left p,
+.shop .top .top-right h2,
+.shop .top .top-right p{
+    letter-spacing: .1em; /* 文字間を調整 */
+}
+
+.shop .low{
+    width: 100%;
+    height: 40%;
+    top: 45%;
+    left: 0;
+}
+.shop .low h2{
+    width: 90%;
+    letter-spacing: .1em;/* 文字間を調整 */
+    left: 5%;
+}
+.shop .low form{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    top: 2em;
+    left: 5%;
+}
+
+.shop .low form .name{
+    width: 90%;
+    height: 6vh;
+    top: 2em;
+    left: 4%;
+    position: absolute;
+    display: flex;
+}
+.shop .low form .email{
+    width: 90%;
+    height: 6vh;
+    top: 30%;
+    left: 5%;
+    position: absolute;
+    display: flex;
+}
+.shop .low  form .message{
+    width: 90%;
+    height: 30vh;
+    top: 52%;
+    left: 5%;
+    position: absolute;
+    display: flex;
+}
+.shop .low form label{ /*labelの幅を固定*/
+    height: 40px;
+}
+.shop .low form input{
+    margin-top: 1.5em;  
+    margin-left: .5em;
+    line-height: 2em;
+    position: absolute;
+}
+.shop .low form .email input{
+    margin-top: 2.5em;
+    margin-left: .1em;
+    line-height: 2em;
+}
+.shop .low form textarea{
+    margin-top: -3.5em; 
+    margin-left: .1em;
+}
+.shop button{
+    width: 8em;
+    height: 3em;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 5em;
+    left: 30%;
+}
+.shop button:hover{
+    background: #C9D9C3;
+}
+
+/* FOOTER */
+.footer{
+    position: relative;
+    top: 0;
+ }
+.footer p{
+    font-size: 20px;
+}
+
+}

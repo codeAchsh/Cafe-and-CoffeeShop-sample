@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Kumbh+Sans:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* NAV */
+.nav-wrapper{
+    width: 100%;
+    height: 100px;
+    border: rgb(191, 207, 224) solid 3px;
+    display: flex;
+    flex-direction: row;
+
+}
+/* 初期状態の非表示 */ 
+.nav-left, 
+.nav-right, 
+.nav-right img { 
+    display: none; /* 最初は非表示 */ 
+}
+/* 通常状態のスタイル */
+.nav-left{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+}
+.nav-left ul{
+    list-style: none;
+    display: flex;
+    /* display: none; */
+    flex-direction: row;
+    text-align: left;
+    position: absolute;
+    width: 30vw;
+    top: 5vh;
+    left: 1vw;
+}
+.nav-left ul li{
+    width: 10vw;
+    padding-left: .5vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav-left ul li:hover{
+    color: #C78853;
+    cursor: pointer;
+}
+#nav-left-items a{
+    text-decoration: none;
+}
+#nav-left-items a:hover{
+    color: #C78853;
+    cursor: pointer;
+}
+.nav-wrapper h1{
+    font-family: "Anton SC";
+    font-size: 40px;
+    position: absolute;
+    top: 3vh;
+    left: 48vw;
+    transform: translateX(-35%); 
+}
+.nav-right{
+    width: 35%;
+    position: absolute;
+    left: 69vw;
+}
+.nav-right ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    position: absolute;
+    width: 30vw;
+    top: 5vh;
+    right: .5vw;
+}
+.nav-right ul li{
+    width: 10vw;
+    padding-left: .5vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav-right ul li:hover{
+    color: #864622;
+    cursor: pointer;
+}
+#nav-right-items a:hover{
+    color: #864622;
+    cursor: pointer;
+}
+.nav-right img{
+    width: 5vw;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    border: rgb(191, 207, 224) solid 3px;
+    position: absolute;
+    top: -5.3vh;
+    left: 21vw;
+}
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu{
+    display: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.hamburger-menu .bar{
+    width: 25px;
+    height: 3px;
+    /* background-color: white; */
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+/* ABOUT-SLIDER */
+#about-slider{
+    /* width: 350vw; */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#about-slider ul{
+    display: flex;
+    height: 200vh;
+    width: calc(100% * 9);/*画像の数に応じて調整 */
+    animation: slide 30s linear infinite;  /* スライドのスピードを設定、@keyframesと組み合わせてループさせる */
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+}   
+ #about-slider li{
+    width: 50vw;
+    height: 100vh;
+ }
+#about-slider ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+#nav-left-items.show,
+#nav-right-items.show{
+    display: flex !important;
+    flex-direction: column;
+}
+/* MORE */
+.more{
+    height: 10vh;
+    border: black solid .5px;
+    display: flex;
+    justify-content: center;  /* 横方向に中央揃え*/
+    align-items: center;  /* 縦方向に中央揃え*/
+}
+.more div:nth-child(0){
+    margin-right: 20px;
+}
+.more div:nth-child(1){
+    margin-right: 40px;
+    margin-left: 20px;
+}
+.more div:nth-child(2){
+    margin-right: 40px;
+    margin-left: 20px;
+}
+/* PRODUCTS */
+.products{
+    width: 100%; 
+    height: 100vh !important;
+    border: black solid .5px;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-around;
+    overflow:hidden;    
+}
+
+/* .products-1 */
+.products .products-1{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 0; 
+    border: black solid .5px;    
+}
+.products-1 h2 { 
+    width: 80%;
+    font-size: 16px; 
+    line-height: 1.2em; 
+} 
+.products-1  p, .products-1 div a { 
+    font-size: 14px; 
+} 
+.products-1 p{
+    width: 80%;
+    height: 5vh;
+    font-family: Lucida Sans Typewriter;
+    font-size: 13px;
+    position: absolute;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+    top: 60%;
+    left: 10vw;
+}
+.products-1 div a{
+    font-family: "Anton SC";
+    font-size: 20px;
+    position: absolute;
+    bottom: 7em;
+    left: 12vw;
+}
+.products-1 div img{
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    bottom: 9em;
+    left: 20vw;
+}
+/* .products-2*/
+.products .products-2,
+.products .products-3{
+    width: 25%;
+    height: 100%;
+    border: black solid .5px;
+    position: absolute;
+    top: 10vh;
+    left: 50%;    
+}
+.products-2 img{
+    width: 10em;
+    height: 15em;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 8em;
+    left: 6em;    
+}
+.products-2 h3{
+    font-family: "Anton SC";
+    position: absolute;
+    bottom: 8em;
+    left: 1em;
+    }
+.products-2 p{
+    font-family: Lucida Sans Typewriter;
+    position: absolute;
+    bottom: 7em;
+    left: 1em;
+}
+/* .products-3*/
+.products .products-3{
+    width: 25%;
+    height: 100%;
+    border: black solid .5px;
+    position: absolute;
+    top: 10vh;
+    left: 75%;    
+}
+.products-3 img{
+    width: 10em;
+    height: 15em;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 8em;
+    left: 6em;
+}
+.products-3 h3{
+    font-family: "Anton SC";
+    position: absolute;
+    bottom: 8em;
+    left: 1em;
+}
+.products-3 p{
+    font-family: Lucida Sans Typewriter;
+    position: absolute;
+    bottom: 6.5em;
+    left: 1em;
+    margin-bottom: 10px; 
+}
+/* MORE THAN */
+.more-than{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+}
+.more-than img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.more-than p{
+    width: 40%;
+    font-family: "Anton SC", serif;
+    font-size: 80px;
+    color: white;
+    position: relative;
+    text-align: center;
+    left: 30%;
+    bottom: 5em;
+}
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-family: Lucida Sans Typewriter;
+    font-size: 30px;
+    margin: 0;
+}
+
+/* ABOUT-SLIDER */
+@keyframes slide{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-350vw);/* 画像の数に応じてr調整 */
+    }
+}
+/* @media screen and (max-width: 394px) { */
+@media screen and (max-width: 769px) {
+/* NAV */
+.nav-wrapper{
+    height: 16vh;
+    justify-content: center;
+    align-items: center;
+}
+.nav-wrapper h1{
+    position: static;
+    margin-left: 28%;
+}
+.nav-left, 
+.nav-right,
+.nav-right img{
+    display: none; 
+}
+.hamburger-menu{
+    display: flex !important;
+}
+.nav-left.show{
+    display: flex !important;
+    flex-direction: column;  
+    align-items: center; 
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translateY(-50%);
+}
+.nav-right.show{
+    display: flex !important;
+    flex-direction: column;  
+    align-items: center; 
+    width: 30%;
+    position: absolute;
+    top: 37%;
+    left: 77%;
+    transform: translateY(-50%);
+}
+.nav-left.show ul,
+.nav-right.show ul{
+    display: block; /* 縦並びに */ 
+    width: 100%; 
+    padding: 0;
+    margin: 0; 
+    text-align:center;
+    font-size: 8px;
+}
+/* ABOUT-SLIDER */
+
+/* MORE */
+.more{
+    height: 10vh;
+    font-size: 10px;
+}
+/* PRODUCTS */
+.products {
+    width: 100%;
+    height: 200vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.products .products-1{
+    width: 100% !important;
+    height: 48% !important;
+    background-color: white;
+    position: absolute;
+    top: 0;
+}
+.products-1 h2{
+    width: 90% !important;
+    font-size: 30px !important;
+    text-align: center;
+    line-height: 1.5em;
+    left: .5em !important;
+    top: 3em !important;
+}
+.products-1 p{
+    width: 80% !important;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 0 auto !important; 
+    padding: 0 10px !important; 
+    top: 26em !important;
+    left: auto !important;
+    position: relative;
+}
+.products-1 div a{
+    position: absolute;
+    top: 25em;
+    left: 32%;
+}
+.products-1 div img{
+    width: 2em;
+    position: absolute;
+    top: 32em;
+    left: 57%;
+}
+.products .products-2{
+    width: 100% !important;
+    height: 26% !important;
+    position: absolute;
+    top: 48%;
+    left: 0;
+} 
+.products .products-3 {
+    width: 100% !important;
+    height: 26% !important;
+    position: absolute;
+    top: 74%;
+    left: 0;
+}
+.products-2 img, 
+.products-3 img {
+    width: 30% !important; 
+    height: 55% !important; 
+    position: absolute;
+    top: 20%;
+    left: 18%;
+}
+.products-2 h3,
+.products-3 h3{
+    margin-left: 55%;
+    top: 55%;
+}
+.products-2 p,
+.products-3 p {
+    margin-left: 55%;
+    top: 70%;
+}
+
+/* MORE THAN */
+.more-than{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    word-wrap: break-word; /* テキストの折り返しを有効にする */
+}
+.more-than img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.more-than p{
+    width: 62%;
+    font-size: 40px;
+    margin-left: -10%;
+    bottom: 10em;
+}
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-family: Lucida Sans Typewriter;
+    font-size: 15px !important;
+    margin: 0;
+}
+}
+
+/* @media screen and (min-width: 394px){ */
+@media screen and (min-width: 769px){
+.nav-left,
+.nav-right,
+.nav-right img{
+    display: flex;
+}
+}

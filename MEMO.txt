@@ -1,0 +1,39 @@
+<Early Birds - Café and Coffee Shop Theme>
+
+https://themeforest.net/item/early-birds-caf-and-coffee-shop-theme/42881514?irgwc=1&clickid=0JSTtjTONxyKUFmTCh0mVTYkUkCXm2QCDyQh2s0&iradid=275988&irpid=1259093&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1259093&utm_medium=affiliate&utm_source=impact_radius
+
+
+
+--------------------
+<Early Birds - Café and Coffee Shop Theme>
+
+https://themeforest.net/item/early-birds-caf-and-coffee-shop-theme/42881514?irgwc=1&clickid=0JSTtjTONxyKUFmTCh0mVTYkUkCXm2QCDyQh2s0&iradid=275988&irpid=1259093&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1259093&utm_medium=affiliate&utm_source=impact_radius
+
+--------------------
+豆の種類: アラビカ豆、ロブスタ豆、ブルーマウンテン豆など、好みの豆の種類を選びましょう。
+
+焙煎度: ライト、ミディアム、ダークなど、好みの焙煎度を選びます。焙煎度が高いほど、コーヒーの風味が濃厚になります。
+
+産地: コロンビア、ブラジル、エチオピアなど、特定の産地のコーヒー豆を選ぶと、その地域特有の風味を楽しむことができます。
+
+新鮮さ: コーヒー豆は新鮮なうちに使うことが重要です。購入後すぐに使うか、適切に保存する方法を知っておきましょう。
+
+購入場所: コーヒー専門店やオンラインショップで購入すると、豆の品質や情報が詳しく伝えられることが多いです。
+
+--------------------
+Anton SC
+
+.anton-sc-regular {
+  font-family: "Anton SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+-------------
+Lucida Sans Typewriter
+
+.anton-sc-regular {
+  font-family: Lucida Sans Typewriter;
+  font-weight: 400;
+  font-style: normal;
+}
