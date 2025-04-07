@@ -111,9 +111,7 @@ header h1{
     margin: 0;
 }
 
-/* @media screen and (max-width: 394px) { */
 @media screen and (max-width: 769px) {
-/* @media screen and (max-width: 426px) { */
 /* HEADER */
 header{
     display: flex;
@@ -137,7 +135,7 @@ header h1{
     width: 90%;
     height: auto;
     flex-direction: column;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 5%;
 }
 .search-item label{

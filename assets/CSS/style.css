@@ -29,7 +29,6 @@
 .nav-left ul{
     list-style: none;
     display: flex;
-    /* display: none; */
     flex-direction: row;
     text-align: left;
     position: absolute;
@@ -87,6 +86,9 @@
     color: #864622;
     cursor: pointer;
 }
+#nav-right-items a {
+    text-decoration: none;
+}
 #nav-right-items a:hover{
     color: #864622;
     cursor: pointer;
@@ -115,7 +117,6 @@
 .hamburger-menu .bar{
     width: 25px;
     height: 3px;
-    /* background-color: white; */
     background-color: black;
     margin: 4px 0;
     transition: 0.4s;
@@ -137,7 +138,7 @@
     margin: 0;
     list-style: none;    
 }   
- #about-slider li{
+#about-slider li{
     width: 50vw;
     height: 100vh;
  }
@@ -160,30 +161,29 @@
     justify-content: center;  /* 横方向に中央揃え*/
     align-items: center;  /* 縦方向に中央揃え*/
 }
-.more div:nth-child(0){
-    margin-right: 20px;
-}
 .more div:nth-child(1){
-    margin-right: 40px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .more div:nth-child(2){
     margin-right: 40px;
     margin-left: 20px;
 }
+.more div:nth-child(3){
+    margin-right: 40px;
+    margin-left: 20px;
+}
 /* PRODUCTS */
-.products{
-    width: 100%; 
-    height: 100vh !important;
+.products-index {
+    width: 100%;
+    height: 100vh; /* 必要に応じて高さを調整 */
     border: black solid .5px;
-    /* position: relative; */
     display: flex;
     justify-content: space-around;
-    overflow:hidden;    
+    position: relative;  
+    background-color: #FBF0DF;
 }
-
 /* .products-1 */
-.products .products-1{
+.products-index .products-1{
     width: 50%;
     height: 100%;
     position: absolute;
@@ -192,9 +192,14 @@
     border: black solid .5px;    
 }
 .products-1 h2 { 
-    width: 80%;
+    width: 65%;
     font-size: 16px; 
     line-height: 1.2em; 
+    display: flex;
+    margin: 3em auto;
+    font-family: "Anton SC";
+    font-size: 45px;
+    word-wrap: break-word;
 } 
 .products-1  p, .products-1 div a { 
     font-size: 14px; 
@@ -224,8 +229,8 @@
     left: 20vw;
 }
 /* .products-2*/
-.products .products-2,
-.products .products-3{
+.products-index .products-2,
+.products-index .products-3{
     width: 25%;
     height: 100%;
     border: black solid .5px;
@@ -255,7 +260,7 @@
     left: 1em;
 }
 /* .products-3*/
-.products .products-3{
+.products-index .products-3{
     width: 25%;
     height: 100%;
     border: black solid .5px;
@@ -352,35 +357,49 @@
 .hamburger-menu{
     display: flex !important;
 }
-.nav-left.show{
+.nav-left.show,
+.nav-right.show {
+    height: 10em;
     display: flex !important;
-    flex-direction: column;  
-    align-items: center; 
-    width: 30%;
+    flex-direction: column;
     position: absolute;
-    top: 20%;
-    left: 75%;
-    transform: translateY(-50%);
+    top: 60px; 
+    left: 50px; 
+    z-index: 999;
+    gap: 10px;
+    width: 150px;  
+    max-width: 100px; 
 }
-.nav-right.show{
-    display: flex !important;
-    flex-direction: column;  
-    align-items: center; 
-    width: 30%;
-    position: absolute;
-    top: 37%;
-    left: 77%;
-    transform: translateY(-50%);
-}
+
+/* メニューのリスト部分 */
 .nav-left.show ul,
-.nav-right.show ul{
-    display: block; /* 縦並びに */ 
-    width: 100%; 
+.nav-right.show ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 0;
-    margin: 0; 
-    text-align:center;
-    font-size: 8px;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    left: 500px;
+    background-color: #fffff0;
+    padding: 10px;
 }
+.nav-right.show ul{
+    left: 450px;
+}
+
+/* ハンバーガーメニュー表示時の調整 */
+.nav-left.show, .nav-right.show {
+    width: 25%; 
+}
+.nav-left.show {
+    left: 50px; 
+}
+.nav-right.show {
+    left: 210px; 
+}
+
 /* ABOUT-SLIDER */
 
 /* MORE */
@@ -389,17 +408,17 @@
     font-size: 10px;
 }
 /* PRODUCTS */
-.products {
+.products-index {
     width: 100%;
     height: 200vh !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    background-color: #FBF0DF !important;
 }
-.products .products-1{
+.products-index .products-1{
     width: 100% !important;
     height: 48% !important;
-    background-color: white;
     position: absolute;
     top: 0;
 }
@@ -418,7 +437,7 @@
     line-height: 1.5em;
     margin: 0 auto !important; 
     padding: 0 10px !important; 
-    top: 26em !important;
+    top: 0 !important;
     left: auto !important;
     position: relative;
 }
@@ -433,14 +452,14 @@
     top: 32em;
     left: 57%;
 }
-.products .products-2{
+.products-index .products-2{
     width: 100% !important;
     height: 26% !important;
     position: absolute;
     top: 48%;
     left: 0;
 } 
-.products .products-3 {
+.products-index .products-3 {
     width: 100% !important;
     height: 26% !important;
     position: absolute;

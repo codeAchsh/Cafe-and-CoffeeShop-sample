@@ -81,9 +81,10 @@ header h1{
 /* PRODUCTS */
 .products{
     width: 100%;
-    height: 230vh;
+    min-height: 1350px;
     background-color: #FBF0DF;
     position: relative;
+    overflow: auto;
 }
 .products h2{
     width: 70%;
@@ -137,7 +138,7 @@ header h1{
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 35vh;
+    top: 30vh;
     left: 20vh;
 }
 .products-2 .beans{
@@ -150,7 +151,7 @@ header h1{
 }
 .products-2 .beans img{
     width: 100%;
-    height: 55vh;
+    height: 50vh;
     object-fit: cover;
 }
 .products-2 .beans h4{
@@ -200,10 +201,7 @@ header h1{
 }
 
 
-/* @media screen and (max-width: 394px) { */
 @media screen and (max-width: 769px) {
-/* @media screen and (max-width: 426px) { */
-/* HEADER */
 header{
     display: flex;
     position: relative;
