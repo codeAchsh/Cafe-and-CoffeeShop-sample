@@ -354,6 +354,10 @@
 .nav-right img{
     display: none; 
 }
+#nav-left-items,
+#nav-right-items{
+    width: 100px;
+}
 .hamburger-menu{
     display: flex !important;
 }
@@ -367,7 +371,7 @@
     left: 50px; 
     z-index: 999;
     gap: 10px;
-    width: 150px;  
+    width: 100px;  
     max-width: 100px; 
 }
 
@@ -390,11 +394,12 @@
 }
 
 /* ハンバーガーメニュー表示時の調整 */
-.nav-left.show, .nav-right.show {
+.nav-left.show, 
+.nav-right.show {
     width: 25%; 
 }
 .nav-left.show {
-    left: 50px; 
+    left: 60px; 
 }
 .nav-right.show {
     left: 210px; 
@@ -522,9 +527,57 @@
 
 /* @media screen and (min-width: 394px){ */
 @media screen and (min-width: 769px){
-.nav-left,
-.nav-right,
-.nav-right img{
+    .nav-left,
+    .nav-right,
+    .nav-right img{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-wrapper {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+}
+    .nav-wrapper h1{
+        font-size: 40px;
+    }
+    .nav-left.show,
+    .nav-right.show {
+        position: relative !important;  
+        top: 100px !important;
+        padding: 0px;
+        z-index: 999;
+    }
+
+    .nav-left.show { 
+        left: 220px !important; 
+    }
+    .nav-right.show { 
+        right: 0 !important; 
+        left: auto !important; 
+    }
+
+    .nav-left.show ul,
+    .nav-right.show ul {
+        position: relative;
+        left: 0 !important; 
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .nav-left.show ul {
+    position: absolute !important; 
+    margin: 0 auto;              
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 }

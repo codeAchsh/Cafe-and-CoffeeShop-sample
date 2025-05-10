@@ -178,8 +178,8 @@ header h1{
     font-weight: 400;
     cursor: pointer;
     position: absolute;
-    bottom: 5em;
-    right: 15em;
+    bottom: -10em;
+    right: 5em;
 }
 .products button:hover{
     background-color: #90553C;
@@ -200,14 +200,13 @@ header h1{
     margin: 0;
 }
 
-
 @media screen and (max-width: 769px) {
 header{
     display: flex;
     position: relative;
 }
 header h1{
-    left: 30vw;
+    left: 38vw;
 }
 /* ABOUT */
 .about{
@@ -247,16 +246,20 @@ header h1{
 .products{
     width: 100%;
     height: auto;
+    padding-left: 15%;
     padding-bottom: 10em;
 }
+
 .products h2{
+    width: 60%;
     font-size: 30px;
     top: 1.5em;
-    left: 2em;
+    left: 9em;
 }
 .products-1,
 .products-2{
     width: 80%;
+    max-width: 768px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -283,7 +286,7 @@ header h1{
     width: 8em;
     position: relative;
     bottom: -8em;
-    left: 34%;
+    left: 35%;
 }
 .products button:hover{
     background-color: #90553C;
@@ -298,3 +301,32 @@ header h1{
 }
 }
 
+
+
+@media screen and (max-width: 480px) {
+    header h1{
+        width: 60%;
+        left: 30%;
+    }
+    .products{
+        margin: 0;
+        padding-left: 1.5rem;
+    }
+    .products h2{
+        width: 60%;
+       left: 25%;
+       font-size: 25px;
+    }
+    .movie {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .video {
+        width: 80%;
+        height: auto;
+        margin: 10 auto;
+        max-height: 80vh;
+        display: block;
+    }
+}

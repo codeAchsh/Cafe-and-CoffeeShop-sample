@@ -118,7 +118,7 @@ header{
     position: relative;
 }
 header h1{
-    left: 30vw;
+    left: 38vw;
 }
 /* SEARCH CONTENT */
 .search-content{
@@ -160,13 +160,13 @@ header h1{
     line-height: 1.2;
 }
 .background button{
-    width: 5em;
+    width: 6em;
     height: 2em;
     background-color: white;
     font-size: 16px;
     position: absolute;
     bottom: 7%;
-    left: 38%;
+    left: 43%;
     z-index: 4;
 }
 .background button:hover{
@@ -182,4 +182,13 @@ header h1{
     font-size: 20px;
 }
 
+}
+
+@media screen and (max-width: 480px){
+    header h1{
+        margin-left: -30px;
+    }
+    .search-content button{
+        margin-left: -30px;
+    }
 }
